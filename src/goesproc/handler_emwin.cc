@@ -50,7 +50,21 @@ void EMWINHandler::handle(std::shared_ptr<const lrit::File> f) {
   if (nlh.noaaSpecificCompression == 10) {
     try {
       auto zip = Zip(f->getData());
-      fb.filename = zip.fileName();
+      std::string filename = zip.fileName();
+      // Convert extension to lowercase
+      if (filename.length() >= 4) {
+          std::string ext = filename.substr(filename.length() - 4);
+          if (ext == ".PNG" || ext == ".png") {
+              filename = filename.substr(0, filename.length() - 4) + ".png";
+          } else if (ext == ".GIF" || ext == ".gif") {
+              filename = filename.substr(0, filename.length() - 4) + ".gif";
+          } else if (ext == ".JPG" || ext == ".jpg") {
+              filename = filename.substr(0, filename.length() - 4) + ".jpg";
+          } else if (ext == ".TXT" || ext == ".txt") {
+              filename = filename.substr(0, filename.length() - 4) + ".txt";
+          }
+      }
+      fb.filename = filename;
 
       // Don't write file if EMWIN TXT is disabled in config
       if (config_.exclude_txt) {

@@ -221,3 +221,4 @@ reference to cross check between the LRIT spec and his implementation.
 - EMWIN text_exclude option adapted from [tmbates12s commit](https://github.com/pietern/goestools/commit/2f54169cabfe05c6bfdc4f68dca0307fe7117df1)
 - Admin timestamp fix adapted from [spinomalys commit](https://github.com/spinomaly/goestools/commit/05d2ff696bbb4a16063aa930c028487360569dfd)
 - DSI-CAPE and DSI-LI naming fix adapted from [jvital2013s commits](https://github.com/JVital2013/goestools-win/commits/main) (e9568fc, f900ece)
+- Lowercase filename fix for image outputs by [jonny-zapto](https://github.com/jonny-zapto)
