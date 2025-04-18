@@ -68,7 +68,7 @@ void EMWINHandler::handle(std::shared_ptr<const lrit::File> f) {
 
       // Don't write file if EMWIN TXT is disabled in config
       if (config_.exclude_txt) {
-        if (fb.filename.substr(fb.filename.length() - 3) == "TXT") {
+        if (fb.filename.substr(fb.filename.length() - 3) == "txt") {
           return;
         }
       }
@@ -87,7 +87,7 @@ void EMWINHandler::handle(std::shared_ptr<const lrit::File> f) {
 
   // Write with TXT extension if this is not a compressed file
   if (nlh.noaaSpecificCompression == 0) {
-    
+
     // Don't write file if EMWIN TXT is disabled in config
     if (config_.exclude_txt) {
       return;
@@ -96,7 +96,7 @@ void EMWINHandler::handle(std::shared_ptr<const lrit::File> f) {
     fb.filename = removeSuffix(text);
 
     // Compressed TXT files also use the uppercase TXT extension
-    const auto path = fb.build("{filename}", "TXT");
+    const auto path = fb.build("{filename}", "txt");
     fileWriter_->write(path, f->read());
     if (config_.json) {
       fileWriter_->writeHeader(*f, path);
