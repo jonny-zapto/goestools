@@ -216,3 +216,6 @@ Project][OSP]). I used his code to verify my antenna system and as
 reference to cross check between the LRIT spec and his implementation.
 
 [OSP]: https://github.com/opensatelliteproject
+
+## Credits
+- EMWIN text_exclude option adapted from [tmbates12s commit](https://github.com/pietern/goestools/commit/2f54169cabfe05c6bfdc4f68dca0307fe7117df1)
