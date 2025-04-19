@@ -1,6 +1,6 @@
 [submodule "vendor/libaec"]
 	path = vendor/libaec
-	url = https://gitlab.dkrz.de/jonny-zapto/libaec.git
+	url = https://github.com/jonny-zapto/libaec.git
 [submodule "vendor/libcorrect"]
 	path = vendor/libcorrect
 	url = https://github.com/jonny-zapto/libcorrect.git
