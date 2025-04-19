@@ -6,10 +6,10 @@
 	url = https://github.com/jonny-zapto/libcorrect.git
 [submodule "vendor/sanitizers-cmake"]
 	path = vendor/sanitizers-cmake
-	url = https://github.com/arsenm/sanitizers-cmake.git
+	url = https://github.com/jonny-zapto/sanitizers-cmake.git
 [submodule "vendor/tinytoml"]
 	path = vendor/tinytoml
-	url = https://github.com/mayah/tinytoml.git
+	url = https://github.com/jonny-zapto/tinytoml.git
 [submodule "vendor/nanomsg"]
 	path = vendor/nanomsg
 	url = https://github.com/jonny-zapto/nanomsg.git
