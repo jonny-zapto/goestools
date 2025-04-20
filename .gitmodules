@@ -1,15 +1,15 @@
 [submodule "vendor/libaec"]
-	path = vendor/libaec
-	url = https://github.com/jonny-zapto/libaec.git
+        path = vendor/libaec
+        url = https://github.com/jonny-zapto/goestools-libaec.git
 [submodule "vendor/libcorrect"]
-	path = vendor/libcorrect
-	url = https://github.com/jonny-zapto/libcorrect.git
+        path = vendor/libcorrect
+        url = https://github.com/jonny-zapto/goestools-libcorrect.git
 [submodule "vendor/sanitizers-cmake"]
-	path = vendor/sanitizers-cmake
-	url = https://github.com/jonny-zapto/sanitizers-cmake.git
+        path = vendor/sanitizers-cmake
+        url = https://github.com/jonny-zapto/goestools-sanitizers-cmake.git
 [submodule "vendor/tinytoml"]
-	path = vendor/tinytoml
-	url = https://github.com/jonny-zapto/tinytoml.git
+        path = vendor/tinytoml
+        url = https://github.com/jonny-zapto/goestools-tinytoml.git
 [submodule "vendor/nanomsg"]
-	path = vendor/nanomsg
-	url = https://github.com/jonny-zapto/nanomsg.git
+        path = vendor/nanomsg
+        url = https://github.com/jonny-zapto/goestools-nanomsg.git
