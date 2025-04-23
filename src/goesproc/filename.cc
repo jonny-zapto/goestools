@@ -33,17 +33,14 @@ void replace(std::string& str, const std::string& keyword, subst fn) {
     if (rpos == std::string::npos) {
       throw std::runtime_error("Invalid pattern");
     }
-
     // Lookup modifier (if any)
     auto mlpos = str.find('|', lpos + prefix.length());
     auto mrpos = rpos;
     auto mok = (mlpos != std::string::npos && mlpos < rpos);
-
     // Lookup replacement
     auto klpos = lpos + prefix.length();
     auto krpos = mok ? mlpos : rpos;
     auto replace = fn(str.substr(klpos, krpos - klpos));
-
     // Apply modifier (if applicable)
     if (mok) {
       auto mod = str.substr(mlpos + 1, mrpos - (mlpos + 1));
@@ -51,9 +48,16 @@ void replace(std::string& str, const std::string& keyword, subst fn) {
         replace = toUpper(replace);
       } else if (mod == "lower") {
         replace = toLower(replace);
+        // space-to-hyphen for region:long|lower
+        if (keyword == "region" && str.substr(klpos, krpos - klpos) == "long") {
+          std::string::size_type pos = 0u;
+          while ((pos = replace.find(" ", pos)) != std::string::npos) {
+            replace.replace(pos, 1, "-");
+            pos += 1;
+          }
+        }
       }
     }
-
     // Replace
     str.replace(lpos, rpos - lpos + 1, replace);
     lpos += replace.length();
